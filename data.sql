@@ -14,3 +14,16 @@ INSERT INTO animals (id, name, date_of_births, escape_attempts, neutered, weight
   (9, 'Boarmon', '2005-06-07', 7, true, 20.4),
   (10, 'Blossom', '1998-10-13', 3, true, 17),
   (11, 'Ditto', '2022-05-14', 4, true, 22);
+
+  INSERT INTO owners (id, full_name, age) VALUES 
+  (100, 'Sam Smith', 34),
+  (101, 'Jennifer Orwell', 19),
+  (102, 'Bob', 45),
+  (103, 'Melody Pond', 77),
+  (104, 'Dean Winchester', 14),
+  (105, 'Jodie Whittaker', 38);
+
+  INSERT INTO species (id, name)
+  VALUES
+  (001, 'Digimon'),
+  (002, 'Pokemon');
