@@ -23,7 +23,45 @@ INSERT INTO animals (id, name, date_of_births, escape_attempts, neutered, weight
   (104, 'Dean Winchester', 14),
   (105, 'Jodie Whittaker', 38);
 
-  INSERT INTO species (id, name)
-  VALUES
+  INSERT INTO species (id, name) VALUES
   (001, 'Digimon'),
   (002, 'Pokemon');
+
+-- Updating species_id from species table according to the names
+UPDATE animals AS a
+SET species_id = s.id
+FROM species AS s
+WHERE a.name LIKE '%mon' AND s.name = 'Digimon';
+
+UPDATE animals AS a
+SET species_id = s.id
+FROM species AS s
+WHERE a.species_id IS NULL AND s.name = 'Pokemon';
+
+-- MULTIPLE TABLES
+-- Updating owners_id
+
+-- 1.Update for Sam Smith owning Agumon
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name = 'Sam Smith')
+WHERE name = 'Agumon';
+
+-- 2.Update for Jennifer Orwell owning Gabumon and Pikachu
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell')
+WHERE name IN ('Gabumon', 'Pikachu');
+
+-- 3.Update for Bob owning Devimon and Plantmon
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name = 'Bob')
+WHERE name IN ('Devimon', 'Plantmon');
+
+-- 4.Update for Melody Pond owning Charmander, Squirtle, and Blossom
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name = 'Melody Pond')
+WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
+
+-- 5.Update for Dean Winchester owning Angemon and Boarmon
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name = 'Dean Winchester')
+WHERE name IN ('Angemon', 'Boarmon');
