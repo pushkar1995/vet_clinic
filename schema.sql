@@ -33,3 +33,13 @@ CREATE TABLE species (
 
 ALTER TABLE animals
 DROP COLUMN species;
+
+-- JOIN TABLE VETS 
+
+CREATE TABLE vets (
+    id INT,
+    name varchar(100),
+    age INT,
+    date_of_graduation DATE,
+    PRIMARY KEY (id)
+);
