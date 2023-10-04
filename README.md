@@ -123,7 +123,10 @@ To run tests after setting up the linters, run the following command:
 - Twitter: [@Pushkar9951](https://twitter.com/Pushkar9951)
 - LinkedIn: [pushkargautam](https://www.linkedin.com/in/pushkar-gautam-94a385271/)
 
-
+👤 **Mumbere Habert**
+- GitHub: [mumbereh](https://github.com/mumbereh)
+- Twitter: [@mumberehabert1](https://twitter.com/mumberehabert1)
+- LinkedIn: [Mumbere Habert](https://www.linkedin.com/in/mumbere-habert-33898a255/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
